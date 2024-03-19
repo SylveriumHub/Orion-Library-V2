@@ -493,7 +493,7 @@ function OrionLib:MakeWindow(WindowConfig)
 	end
 
 	local TabHolder = AddThemeObject(SetChildren(SetProps(MakeElement("ScrollFrame", Color3.fromRGB(255, 255, 255), 4), {
-		Size = UDim2.new(1, 0, 1, -50)
+		Size = UDim2.new(1, 0, 1, -20)
 	}), {
 		MakeElement("List"),
 		MakeElement("Padding", 8, 0, 0, 8)
@@ -729,7 +729,7 @@ function OrionLib:MakeWindow(WindowConfig)
 		TabConfig.PremiumOnly = TabConfig.PremiumOnly or false
 
 		local TabFrame = SetChildren(SetProps(MakeElement("Button"), {
-			Size = UDim2.new(1, 0, 0, 30),
+			Size = UDim2.new(0, 0, 0, 0),
 			Parent = TabHolder
 		}), {
 			AddThemeObject(SetProps(MakeElement("Image", TabConfig.Icon), {
@@ -770,7 +770,7 @@ function OrionLib:MakeWindow(WindowConfig)
 		if FirstTab then
 			FirstTab = false
 			TabFrame.Ico.ImageTransparency = 0
-			TabFrame.Title.TextTransparency = 0
+			TabFrame.Title.TextTransparency = 1
 			TabFrame.Title.Font = Enum.Font.GothamBlack
 			Container.Visible = true
 		end    
